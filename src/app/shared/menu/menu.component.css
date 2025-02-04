@@ -1,0 +1,108 @@
+/* Estilo amigable y entretenido para niños */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.menu {
+    background-color: #ffebcd;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    color: #ff4500;
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #ffa07a;
+    border-radius: 10px;
+    background-color: #fffacd;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #ffdab9;
+    transform: scale(1.1);
+}
+
+.menu-item:active {
+    background-color: #ffdead;
+    transform: scale(1.05);
+}/* Estilo amigable y entretenido para niños */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar {
+    background-color: #ffebcd;
+    border: 2px solid #f25b1b;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    color: #ff69b4;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ff69b4;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #ff69b4;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.navbar-toggler {
+    border-color: #ff69b4;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 105, 180, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}/* Estilo amigable y entretenido para niños */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar {
+    background-color: #ffebcd;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    color: #ff69b4;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ff69b4;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #ff69b4;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.navbar-toggler {
+    border-color: #ff69b4;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 105, 180, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}

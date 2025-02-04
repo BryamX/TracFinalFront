@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Registrar Nivel</h2>
+
+  <form (ngSubmit)="createNivel()">
+    <div class="form-group">
+      <label for="nombre_nivel">Nombre del Nivel</label>
+      <input type="text" class="form-control" id="nombre_nivel" [(ngModel)]="nuevoNivel.nombre_nivel" name="nombre_nivel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea class="form-control" id="descripcion" [(ngModel)]="nuevoNivel.descripcion" name="descripcion" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear Nivel</button>
+  </form>
+
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+
+  <h3 class="mt-5">Lista de Niveles</h3>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let nivel of niveles">
+      <div>-{{nivel.id_nivel}} - {{ nivel.nombre_nivel }} - {{ nivel.descripcion }}</div>
+      <button class="btn btn-danger" (click)="deleteNivel(nivel)">Eliminar</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Registrar categoria</h2>
+  
+    <form (ngSubmit)="createCategoria()">
+      <div class="form-group">
+        <label for="nombrecategoria">Nombre del categoria</label>
+        <input type="text" class="form-control" id="nombrecategoria" [(ngModel)]="nuevoCategoria.nombre_categoria" name="nombrecategoria" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion" [(ngModel)]="nuevoCategoria.descripcion" name="descripcion" required></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Crear categoria</button>
+    </form>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  
+    <h3 class="mt-5">Lista de categorias</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let categoria of categorias">
+        <div>-{{ categoria.id_categoria }} - {{ categoria.nombre_categoria }} - {{ categoria.descripcion }}</div>
+        <button class="btn btn-danger" (click)="deleteCategoria(categoria)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+  

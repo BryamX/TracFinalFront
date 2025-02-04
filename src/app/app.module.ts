@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +20,9 @@ import { PoliticasComponent } from './Pages/politicas/politicas.component';
 import { JuegosComponent } from './Pages/juegos/juegos.component';
 import { TraduccionComponent } from './traduccion/traduccion.component';
 import { EducacionComponent } from './Pages/educacion/educacion.component';
-
+import { CategoriasComponent } from './Pages/categorias/categorias.component';
+import { AprendizajesComponent } from './Pages/aprendizajes/aprendizajes.component';
+import { NivelesComponent } from './Pages/niveles/niveles.component'; // Asegúrate de importarlo aquí
 
 @NgModule({
   declarations: [
@@ -36,18 +38,22 @@ import { EducacionComponent } from './Pages/educacion/educacion.component';
     PoliticasComponent,
     JuegosComponent,
     TraduccionComponent,
-    EducacionComponent
+    EducacionComponent,
+    CategoriasComponent,
+    AprendizajesComponent,
+    NivelesComponent // Debería estar aquí en 'declarations'
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   HttpClientModule,
-   ReactiveFormsModule
-   
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule,
+    // No es necesario agregar 'NivelesComponent' en 'imports'
   ],
-  providers: [ LoginService,
-    provideClientHydration(withEventReplay())
+  providers: [
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

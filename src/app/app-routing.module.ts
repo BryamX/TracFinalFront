@@ -8,6 +8,9 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrudUsuarioComponent } from './Pages/crud-usuario/crud-usuario.component';
 import { DescargaAppComponent } from './Pages/descarga-app/descarga-app.component';
 import { PoliticasComponent } from './Pages/politicas/politicas.component';
+import { NivelesComponent } from './Pages/niveles/niveles.component';
+import { CategoriasComponent } from './Pages/categorias/categorias.component';
+import { AprendizajesComponent } from './Pages/aprendizajes/aprendizajes.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
@@ -16,7 +19,20 @@ const routes: Routes = [
   { path: "nosotros", component: NosotrosComponent },
   { path: "registrarse", component: CrudUsuarioComponent },
   { path: "aplicacion", component: DescargaAppComponent },
-  { path: "politicas", component: PoliticasComponent }
+  { path: "politicas", component: PoliticasComponent },
+  {
+    path:"niveles",
+    component:NivelesComponent
+  },
+  {
+    path:"categorias",
+    component:CategoriasComponent
+  },
+  {
+    path:"aprendizajes",
+    component:AprendizajesComponent
+  }
+
 ];
 
 @NgModule({
