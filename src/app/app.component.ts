@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,22 +11,18 @@ import { AuthService } from './auth.service';
 export class AppComponent {
   title = 'nombre-del-proyecto';
 
-constructor(private authService:AuthService){
-  try {
-    if (typeof localStorage !== 'undefined') {
-      this.authService.loadUserFromLocalStorage();
-    } else {
+  constructor(private authService: AuthService, private router: Router) {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        this.authService.loadUserFromLocalStorage();
+      }
+    } catch (error) {
+      console.error('Ocurrió un error inesperado:', error);
     }
-  } catch (error) {
-    throw new Error('Ocurrió un error inesperado. Por favor, inténtalo de nuevo.');
-    }
+  }
+
+  // Esta función oculta el menú y el footer cuando estamos en la página de login
+  mostrarMenu(): boolean {
+    return this.router.url !== '/login';
+  }
 }
-
-footer() {
-  return this.authService.isLogeado
-  }
-
-
-}
-
-

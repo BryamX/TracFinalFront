@@ -10,31 +10,13 @@ import { DescargaAppComponent } from './Pages/descarga-app/descarga-app.componen
 import { PoliticasComponent } from './Pages/politicas/politicas.component';
 
 const routes: Routes = [
-  {
-    path:"login",
-    component:LoginComponent
-  },
-  {
-    path:"inicio",
-    component:InicioComponent
-  },
-  {
-    path:"nosotros",
-    component:NosotrosComponent
-  },
-  {
-    path:"registrarse",
-    component:CrudUsuarioComponent
-  },
-  {
-    path:"aplicacion",
-    component:DescargaAppComponent
-  },
-  {
-    path:"politicas",
-    component:PoliticasComponent
-  }
-
+  { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
+  { path: "login", component: LoginComponent },
+  { path: "inicio", component: InicioComponent },
+  { path: "nosotros", component: NosotrosComponent },
+  { path: "registrarse", component: CrudUsuarioComponent },
+  { path: "aplicacion", component: DescargaAppComponent },
+  { path: "politicas", component: PoliticasComponent }
 ];
 
 @NgModule({

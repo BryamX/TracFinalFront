@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-politicas',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoliticasComponent implements OnInit{
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     // Mostrar el modal al cargar el componente
@@ -32,5 +33,6 @@ export class PoliticasComponent implements OnInit{
     if (modal) {
       modal.classList.remove('show');
     }
+    this.router.navigate(['/nosotros']); // Redirige a la página "Nosotros"
   }
 }
