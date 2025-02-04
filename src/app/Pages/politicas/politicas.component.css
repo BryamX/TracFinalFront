@@ -1,0 +1,166 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+  }
+  
+  /* Estilo del modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    position: absolute;
+    top: 78%; /* Ajustar el valor para bajarlo más */
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Aumenta el ancho del modal */
+    max-width: 800px; /* Máximo ancho para el modal */
+    min-width: 600px; /* Ancho mínimo del modal */
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Header del modal */
+  .modal-header h2 {
+    text-align: center;
+    color: #ff6347;
+    font-size: 3em; /* Aumentar el tamaño del título */
+    margin: 0;
+    animation: pulse 2s infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botón de cierre */
+  .close {
+    color: #ff6347;
+    font-size: 40px; /* Aumenta el tamaño del botón de cerrar */
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .close:hover {
+    transform: rotate(90deg); /* Añadir animación de giro cuando se pasa el mouse */
+  }
+  
+  /* Secciones de política */
+  .policy-section {
+    margin-bottom: 20px;
+    background-color: #ffebcd;
+    padding: 15px;
+    border-radius: 10px;
+    animation: bounce 1s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .policy-section h4 {
+    color: #ff6347;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botón de aceptación */
+  .accept-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5em; /* Aumentar el tamaño del botón */
+    cursor: pointer;
+    animation: pulseButton 1.5s infinite;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accept-btn:hover {
+    background-color: #e5533d;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translate(-50%, -70%); /* Ajustar para que entre más abajo */
+    }
+    100% {
+      transform: translate(-50%, -60%); /* Mantenerlo en una posición más baja */
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      color: #ff6347;
+    }
+    50% {
+      color: #ff4500;
+    }
+    100% {
+      color: #ff6347;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulseButton {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Mostrar modal */
+  .modal.show {
+    display: block;
+  }
+  

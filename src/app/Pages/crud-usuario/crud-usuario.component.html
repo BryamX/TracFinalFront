@@ -1,0 +1,87 @@
+<div class="container">
+    <h2>Formulario de Registro de Usuario</h2>
+  
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Campo de usuario -->
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" class="form-control" formControlName="usuario" />
+        <div *ngIf="registerForm.get('usuario')?.touched && registerForm.get('usuario')?.invalid" class="error">
+          <small *ngIf="registerForm.get('usuario')?.errors?.['required']">El usuario es requerido.</small>
+        </div>
+      </div>
+  
+      <!-- Campo de clave -->
+      <div class="form-group">
+        <label for="clave">Clave:</label>
+        <input type="password" id="clave" class="form-control" formControlName="clave" />
+        <div *ngIf="registerForm.get('clave')?.touched && registerForm.get('clave')?.invalid" class="error">
+          <small *ngIf="registerForm.get('clave')?.errors?.['required']">La clave es requerida.</small>
+        </div>
+      </div>
+  
+      <!-- Campo de nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" class="form-control" formControlName="nombre" />
+        <div *ngIf="registerForm.get('nombre')?.touched && registerForm.get('nombre')?.invalid" class="error">
+          <small *ngIf="registerForm.get('nombre')?.errors?.['required']">El nombre es requerido.</small>
+        </div>
+      </div>
+  
+      <!-- Campo de edad -->
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" class="form-control" formControlName="edad" />
+        <div *ngIf="registerForm.get('edad')?.touched && registerForm.get('edad')?.invalid" class="error">
+          <small *ngIf="registerForm.get('edad')?.errors?.['required']">La edad es requerida.</small>
+          <small *ngIf="registerForm.get('edad')?.errors?.['min']">Debe ser mayor de 0 años.</small>
+        </div>
+      </div>
+      
+            <!-- Campo carnet de discapacidad -->
+      <div class="form-group">
+        <label for="carnet">¿Tiene carnet de discapacidad?</label>
+        <select id="carnet" class="form-control" formControlName="carnet_discapacidad">
+          <option [ngValue]="true">Sí</option>
+          <option [ngValue]="false">No</option>
+        </select>
+        <div *ngIf="registerForm.get('carnet_discapacidad')?.touched && registerForm.get('carnet_discapacidad')?.invalid" class="error">
+          <small *ngIf="registerForm.get('carnet_discapacidad')?.errors?.['required']">El carnet de discapacidad es requerido.</small>
+        </div>
+      </div>
+
+      <!-- Campo porcentaje de discapacidad -->
+      <div class="form-group">
+        <label for="discapacidad">Porcentaje de Discapacidad:</label>
+        <input type="number" id="discapacidad" class="form-control" formControlName="discapacidad" min="0" max="100" />
+        <div *ngIf="registerForm.get('discapacidad')?.touched && registerForm.get('discapacidad')?.invalid" class="error">
+          <small *ngIf="registerForm.get('discapacidad')?.errors?.['required']">El porcentaje de discapacidad es requerido.</small>
+        </div>
+      </div>
+  
+      <!-- Campo teléfono -->
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" class="form-control" formControlName="telefono" />
+        <div *ngIf="registerForm.get('telefono')?.touched && registerForm.get('telefono')?.invalid" class="error">
+          <small *ngIf="registerForm.get('telefono')?.errors?.['required']">El teléfono es requerido.</small>
+        </div>
+      </div>
+  
+      <!-- Campo correo -->
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" class="form-control" formControlName="correo" />
+        <div *ngIf="registerForm.get('correo')?.touched && registerForm.get('correo')?.invalid" class="error">
+          <small *ngIf="registerForm.get('correo')?.errors?.['required']">El correo es requerido.</small>
+          <small *ngIf="registerForm.get('correo')?.errors?.['email']">Por favor ingrese un correo válido.</small>
+        </div>
+      </div>
+  
+      <!-- Botón de envío -->
+      <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Registrarme</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,73 @@
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-info-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #3c0fe1, #ffa751);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+  animation: float 3s ease-in-out infinite;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  color: #f6f6f6;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.app-description,
+.app-purpose {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.download-section {
+  margin-top: 20px;
+}
+
+.download-text {
+  font-size: 1.5rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ee690a, #ee0979);
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+}
+
+/* Animación */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
