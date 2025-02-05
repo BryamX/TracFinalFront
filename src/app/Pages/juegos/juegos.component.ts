@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class JuegosComponent {
 
+  juegoSeleccionado: number | null = null;
+
+  jugar(juego: number) {
+    this.juegoSeleccionado = juego;
+  }
 }

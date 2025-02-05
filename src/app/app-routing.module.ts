@@ -11,6 +11,9 @@ import { PoliticasComponent } from './Pages/politicas/politicas.component';
 import { NivelesComponent } from './Pages/niveles/niveles.component';
 import { CategoriasComponent } from './Pages/categorias/categorias.component';
 import { AprendizajesComponent } from './Pages/aprendizajes/aprendizajes.component';
+import { JuegosComponent } from './Pages/juegos/juegos.component';  
+import { TraduccionComponent } from './traduccion/traduccion.component';
+import { EducacionComponent } from './Pages/educacion/educacion.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
@@ -20,6 +23,9 @@ const routes: Routes = [
   { path: "registrarse", component: CrudUsuarioComponent },
   { path: "aplicacion", component: DescargaAppComponent },
   { path: "politicas", component: PoliticasComponent },
+  { path: "juegos", component: JuegosComponent },  // Asegurar que esta ruta está bien definida
+  { path: "traduccion", component: TraduccionComponent },
+  { path: "educacion", component: EducacionComponent },
   {
     path:"niveles",
     component:NivelesComponent

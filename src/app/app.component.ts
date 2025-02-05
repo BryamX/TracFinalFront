@@ -23,6 +23,6 @@ export class AppComponent {
 
   // Esta función oculta el menú y el footer cuando estamos en la página de login
   mostrarMenu(): boolean {
-    return this.router.url !== '/login';
+    return this.router.url !== '/login' && this.router.url !== '/registrarse';
   }
 }

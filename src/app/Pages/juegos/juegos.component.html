@@ -1,1 +1,15 @@
-<p>juegos works!</p>
+<div class="juegos-container">
+    <h1>🎲 ¡Elige tu juego! 🎮</h1>
+  
+    <button class="btn-juego" (click)="jugar(1)">🃏 Juego de Cartas</button>
+    <button class="btn-juego" (click)="jugar(2)">🎯 👐 Atrapa la Seña</button>
+  
+    <div *ngIf="juegoSeleccionado === 1">
+      <app-juego-cartas></app-juego-cartas>
+    </div>
+
+    <div *ngIf="juegoSeleccionado === 2">
+        <app-juego-atrapa-senas></app-juego-atrapa-senas>
+      </div> 
+  </div>
+  

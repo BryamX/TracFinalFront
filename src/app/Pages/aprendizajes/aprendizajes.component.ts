@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistrarAprService } from '../../../../../nombre-del-proyecto/src/app/Services/registrar_aprendizajes/registrar-apr.service';
-import { RegistrarCatService } from '../../../../../nombre-del-proyecto/src/app/Services/registrar_categoria/registrar-cat.service';
-import { RegistrarNivService } from '../../../../../nombre-del-proyecto/src/app/Services/registrar_niveles/registrar-niv.service';
+import { RegistrarAprService } from '../../Services/registrar_aprendizajes/registrar-apr.service';
+import { RegistrarCatService } from '../../Services/registrar_categoria/registrar-cat.service';
+import { RegistrarNivService } from '../../Services/registrar_niveles/registrar-niv.service';
 
 interface Aprendizaje {
   id_aprendizaje?: number;

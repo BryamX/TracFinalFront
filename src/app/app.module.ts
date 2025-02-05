@@ -22,7 +22,9 @@ import { TraduccionComponent } from './traduccion/traduccion.component';
 import { EducacionComponent } from './Pages/educacion/educacion.component';
 import { CategoriasComponent } from './Pages/categorias/categorias.component';
 import { AprendizajesComponent } from './Pages/aprendizajes/aprendizajes.component';
-import { NivelesComponent } from './Pages/niveles/niveles.component'; // Asegúrate de importarlo aquí
+import { NivelesComponent } from './Pages/niveles/niveles.component';
+import { JuegoCartasComponent } from './Pages/juegos/juego-cartas/juego-cartas.component';
+import { JuegoAtrapaSenasComponent } from './Pages/juegos/juego-atrapa-senas/juego-atrapa-senas.component'; // Asegúrate de importarlo aquí
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { NivelesComponent } from './Pages/niveles/niveles.component'; // Asegúr
     EducacionComponent,
     CategoriasComponent,
     AprendizajesComponent,
-    NivelesComponent // Debería estar aquí en 'declarations'
+    NivelesComponent,
+    JuegoCartasComponent,
+    JuegoAtrapaSenasComponent // Debería estar aquí en 'declarations'
   ],
   imports: [
     BrowserModule,

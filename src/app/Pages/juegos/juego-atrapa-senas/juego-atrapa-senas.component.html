@@ -1,0 +1,20 @@
+<div class="juego-atrapa-container">
+    <h2>👐 ¡Atrapa la Seña Correcta! 🏆</h2>
+    <p>Categoría: <strong>{{ categoria }}</strong></p>
+    
+    <!-- Área del juego -->
+    <div class="game-area">
+      <div *ngFor="let sena of senas" 
+           class="sena" 
+           [style.top.px]="sena.y" 
+           [style.left.px]="sena.x">
+        <img [src]="sena.imagen" alt="Seña">
+      </div>
+  
+      <div class="canasta" [style.left.px]="posicionCanasta"></div>
+    </div>
+  
+    <p>Puntos: {{ puntos }}</p>
+    <button (click)="iniciarJuego()">🔄 Reiniciar</button>
+  </div>
+  

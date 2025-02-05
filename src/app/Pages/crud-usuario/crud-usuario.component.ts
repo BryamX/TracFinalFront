@@ -34,6 +34,12 @@ export class CrudUsuarioComponent implements OnInit{
     });
    }
 
+
+   //volver al login
+   volverAlLogin(): void {
+    this.rutas.navigate(['/login']);
+  }
+
   ngOnInit(): void {
     
   }

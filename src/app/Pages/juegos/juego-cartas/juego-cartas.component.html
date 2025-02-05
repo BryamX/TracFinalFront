@@ -1,0 +1,18 @@
+<div class="juego-cartas-container">
+    <h2>🃏 Juego de Cartas</h2>
+  
+    <div class="carta" (click)="voltearCarta()">
+      <img *ngIf="!cartaVolteada" src="assets/back-card.png" alt="Dorso de la carta">
+      <img *ngIf="cartaVolteada" [src]="cartaActual.imagen" alt="Carta">
+    </div>
+  
+    <div *ngIf="cartaVolteada" class="opciones">
+      <button *ngFor="let opcion of cartaActual.opciones" 
+              (click)="seleccionarOpcion(opcion)">
+        {{ opcion }}
+      </button>
+    </div>
+  
+    <p *ngIf="mensaje" class="mensaje">{{ mensaje }}</p>
+  </div>
+  

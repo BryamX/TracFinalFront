@@ -152,4 +152,12 @@ body {
     color: #4a4a4a;
   }
   
+  .feature {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature:hover {
+    transform: scale(1.1);
+  }
   
