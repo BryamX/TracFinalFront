@@ -80,12 +80,14 @@ export class LoginComponent {
         if ( Array.isArray(result) && result.length > 0 ){
           const usuarioEncontrados = result as Usuario[];
           const usuarioEncontrado = usuarioEncontrados.find(usuario => usuario.usuario === usu && usuario.pasword === contra);
+          console.log(usuarioEncontrado)
           if (usuarioEncontrado){
-
+            
             Swal.fire(`Bienvenid@ ${usu}`, 'Inicio de sesion correcto', 'success');
             this.restriccion.login();
             ////ECONTRAR A LA PERSONA usar get
             this.restriccion.id_persona=usuarioEncontrado.id;
+            console.log(usuarioEncontrado.id)
             this.router.navigate(["/nosotros"])
             
 

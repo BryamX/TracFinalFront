@@ -24,7 +24,8 @@ import { CategoriasComponent } from './Pages/categorias/categorias.component';
 import { AprendizajesComponent } from './Pages/aprendizajes/aprendizajes.component';
 import { NivelesComponent } from './Pages/niveles/niveles.component';
 import { JuegoCartasComponent } from './Pages/juegos/juego-cartas/juego-cartas.component';
-import { JuegoAtrapaSenasComponent } from './Pages/juegos/juego-atrapa-senas/juego-atrapa-senas.component'; // Asegúrate de importarlo aquí
+import { JuegoAtrapaSenasComponent } from './Pages/juegos/juego-atrapa-senas/juego-atrapa-senas.component';
+import { EditarCrudComponent } from './Pages/editar-crud/editar-crud.component'; // Asegúrate de importarlo aquí
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { JuegoAtrapaSenasComponent } from './Pages/juegos/juego-atrapa-senas/jue
     AprendizajesComponent,
     NivelesComponent,
     JuegoCartasComponent,
-    JuegoAtrapaSenasComponent // Debería estar aquí en 'declarations'
+    JuegoAtrapaSenasComponent,
+    EditarCrudComponent // Debería estar aquí en 'declarations'
   ],
   imports: [
     BrowserModule,

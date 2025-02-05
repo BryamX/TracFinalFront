@@ -14,9 +14,9 @@ export class JuegoCartasComponent {
 
   cartas = [
     {
-      imagen: 'assets/carta1.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'Manzana',
-      opciones: ['Manzana', 'Pera', 'Banana']
+      imagen: 'https://static.vecteezy.com/system/resources/previews/002/594/555/non_2x/sign-language-hand-gesture-indicating-a-letter-line-and-fill-icon-free-vector.jpg', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'A',
+      opciones: ['A', 'B', 'C']
     },
     {
       imagen: 'assets/carta2.png', // Otra carta con una imagen diferente

@@ -14,6 +14,7 @@ import { AprendizajesComponent } from './Pages/aprendizajes/aprendizajes.compone
 import { JuegosComponent } from './Pages/juegos/juegos.component';  
 import { TraduccionComponent } from './traduccion/traduccion.component';
 import { EducacionComponent } from './Pages/educacion/educacion.component';
+import { EditarCrudComponent } from './Pages/editar-crud/editar-crud.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
@@ -37,6 +38,11 @@ const routes: Routes = [
   {
     path:"aprendizajes",
     component:AprendizajesComponent
+  }
+  ,
+  {
+    path:"editar-usuario",
+    component:EditarCrudComponent
   }
 
 ];
