@@ -15,6 +15,7 @@ import { JuegosComponent } from './Pages/juegos/juegos.component';
 import { TraduccionComponent } from './traduccion/traduccion.component';
 import { EducacionComponent } from './Pages/educacion/educacion.component';
 import { EditarCrudComponent } from './Pages/editar-crud/editar-crud.component';
+import { ComoesComponent } from './Pages/comoes/comoes.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "juegos", component: JuegosComponent },  // Asegurar que esta ruta está bien definida
   { path: "traduccion", component: TraduccionComponent },
   { path: "educacion", component: EducacionComponent },
+  { path: "comoes", component: ComoesComponent },
   {
     path:"niveles",
     component:NivelesComponent

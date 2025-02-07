@@ -1,1 +1,22 @@
-<p>educacion works!</p>
+<div class="educacion-container">
+    <!-- Menú lateral -->
+    <div class="menu-lateral">
+      <button class="menu-btn" (click)="seleccionarCategoria('abecedario')">🔤 Abecedario</button>
+      <button class="menu-btn" (click)="seleccionarCategoria('vocales')">🅰 Vocales</button>
+      <button class="menu-btn" (click)="seleccionarCategoria('numeros')">🔢 Números</button>
+      <!-- Botón de regreso -->
+      <button class="btn-regresar" (click)="volverANosotros()">⬅ Volver</button>
+    </div>
+  
+    <!-- Contenido dinámico -->
+    <div class="contenido">
+      <h2>{{ titulo }}</h2>
+      <div class="cartas">
+        <div *ngFor="let item of elementos" class="carta animate">
+          <img [src]="item.imagen" [alt]="item.nombre">
+          <p>{{ item.nombre }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

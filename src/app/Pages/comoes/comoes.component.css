@@ -1,21 +1,31 @@
-.educacion-container {
-    display: flex;
-    height: 100vh;
-    background: linear-gradient(135deg, #23d9e9, #f13369);
-    font-family: 'Comic Sans MS', cursive;
-  }
-  
-  /* Estilo del menú lateral */
-  .menu-lateral {
-    width: 200px;
-    background: #ff6f61;
+.comoes-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6d80ed, #f64949);
+    font-family: 'Comic Sans MS', cursive;
     padding: 20px;
-    border-radius: 10px 0 0 10px;
+    text-align: center;
+  }
+
+  /* Campo de búsqueda */
+  .busqueda {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
   }
   
-  .menu-btn {
+  .busqueda input {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    outline: none;
+    width: 300px;
+  }
+  
+  .busqueda button {
     background: #ffcc00;
     color: #000;
     font-size: 18px;
@@ -23,34 +33,27 @@
     border: none;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 10px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s;
   }
   
-  .menu-btn:hover {
+  .busqueda button:hover {
     transform: scale(1.1);
     background: #ffee58;
   }
   
-  /* Contenido dinámico */
-  .contenido {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .cartas {
+  /* Cartas de la traducción */
+  .resultado {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     margin-top: 20px;
   }
   
   .carta {
-    width: 120px;
-    height: 150px;
+    width: 100px;
+    height: 120px;
     background: white;
     border-radius: 15px;
     display: flex;
@@ -59,7 +62,7 @@
     justify-content: center;
     padding: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s;
   }
   
   .carta:hover {
@@ -67,7 +70,7 @@
   }
   
   .carta img {
-    width: 80px;
+    width: 70px;
     height: auto;
   }
   
@@ -78,7 +81,7 @@
     margin-top: 5px;
   }
   
-  /* Animación de entrada */
+  /* Animaciones */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -94,6 +97,7 @@
     animation: fadeIn 0.5s ease-in-out;
   }
   
+  /* Botón de regreso */
   .btn-regresar {
     background: linear-gradient(135deg, #ffcc00, #ff6699);
     color: white;
@@ -105,15 +109,13 @@
     cursor: pointer;
     margin-top: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     display: block;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
   }
   
   .btn-regresar:hover {
     transform: scale(1.1) rotate(-3deg);
     background: linear-gradient(135deg, #ff6699, #ffcc00);
   }
-  
+

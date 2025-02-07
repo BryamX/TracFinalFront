@@ -1,0 +1,20 @@
+<div class="comoes-container">
+    <!-- Campo de entrada y botón de búsqueda -->
+    <div class="busqueda">
+      <input type="text" [(ngModel)]="texto" (keyup.enter)="buscar()" placeholder="Escribe una palabra o frase...">
+      <button (click)="buscar()">🔍 Buscar</button>
+    </div>
+  
+    <!-- Cartas con la traducción a señas -->
+    <div class="resultado" *ngIf="traduccion.length > 0">
+      <div *ngFor="let letra of traduccion" class="carta animate">
+        <img [src]="'assets/señas/' + letra + '.png'" [alt]="letra">
+        <p>{{ letra.toUpperCase() }}</p>
+      </div>
+    </div>
+  
+    <!-- Botón para regresar -->
+    <button class="btn-regresar" (click)="volverANosotros()">⬅ Regresar</button>
+  </div>
+
+  <!-- <img src="fondo_ls.jpg" > -->
