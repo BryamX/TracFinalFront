@@ -14,10 +14,10 @@
   
       <!-- Campo de clave -->
       <div class="form-group">
-        <label for="clave">Clave:</label>
-        <input type="password" id="clave" class="form-control" formControlName="clave" />
-        <div *ngIf="registerForm.get('clave')?.touched && registerForm.get('clave')?.invalid" class="error">
-          <small *ngIf="registerForm.get('clave')?.errors?.['required']">La clave es requerida.</small>
+        <label for="pasword">Clave:</label>
+        <input type="password" id="pasword" class="form-control" formControlName="pasword" />
+        <div *ngIf="registerForm.get('pasword')?.touched && registerForm.get('pasword')?.invalid" class="error">
+          <small *ngIf="registerForm.get('pasword')?.errors?.['required']">La pasword es requerida.</small>
         </div>
       </div>
   
@@ -54,9 +54,9 @@
 
       <!-- Campo porcentaje de discapacidad -->
       <div class="form-group">
-        <label for="discapacidad">Porcentaje de Discapacidad:</label>
-        <input type="number" id="discapacidad" class="form-control" formControlName="discapacidad" min="0" max="100" />
-        <div *ngIf="registerForm.get('discapacidad')?.touched && registerForm.get('discapacidad')?.invalid" class="error">
+        <label for="porcentaje_de_discapacidad">Porcentaje de Discapacidad:</label>
+        <input type="number" id="porcentaje_de_discapacidad" class="form-control" formControlName="porcentaje_de_discapacidad" min="0" max="100" />
+        <div *ngIf="registerForm.get('porcentaje_de_discapacidad')?.touched && registerForm.get('porcentaje_de_discapacidad')?.invalid" class="error">
           <small *ngIf="registerForm.get('discapacidad')?.errors?.['required']">El porcentaje de discapacidad es requerido.</small>
         </div>
       </div>

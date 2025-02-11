@@ -23,48 +23,21 @@ export class CrudUsuarioComponent implements OnInit{
 
     this.registerForm = this.fb.group({
       usuario: ['', Validators.required],
-      clave: ['', Validators.required],
+      pasword: ['', Validators.required],
       nombre: ['', Validators.required],
       edad: [null, [Validators.required, Validators.min(1)]],
-      discapacidad: [null, [Validators.required, Validators.min(0), Validators.max(100)]],
+      porcentaje_de_discapacidad: [null, [Validators.required, Validators.min(0), Validators.max(100)]],
       carnet_discapacidad: [false, Validators.required],
       telefono: ['', Validators.required],
       correo: ['', [Validators.required, Validators.email]],
-
+      numero_carnet:['001']
     });
    }
 
-
-   //volver al login
-   volverAlLogin(): void {
-    this.rutas.navigate(['/login']);
-  }
-
-  ngOnInit(): void {
-    
-  }
-
   onSubmit(): void {//envaras datos al back
+    console.log("entro a enviar")
     if (this.registerForm.valid) {
-      console.log('Formulario enviado:', this.registerForm.value);
-      // v.base                                        v.front
-      this.usuario.usuario= this.registerForm.value.usuario;
-      this.usuario.pasword= this.registerForm.value.clave;
-      this.usuario.nombre= this.registerForm.value.nombre;
-      this.usuario.edad= this.registerForm.value.edad;
-      this.usuario.porcentaje_de_discapacidad= this.registerForm.value.discapacidad;
-
- // Verifica que carnet_discapacidad tiene un valor booleano
- console.log('Carnet de discapacidad:', this.registerForm.value.carnet_discapacidad); 
-
-// Aquí carnet_discapacidad será un valor booleano automáticamente gracias a los radio buttons
-this.usuario.carnet_discapacidad = this.registerForm.value.carnet_discapacidad;
-
-      this.usuario.telefono= this.registerForm.value.telefono;
-      this.usuario.correo= this.registerForm.value.correo;
-      
-      
-      this.regi_usu.create(this.usuario).subscribe(usu=> {
+      this.regi_usu.create(this.registerForm.value).subscribe(usu=> {
         if(usu){
           Swal.fire(`Bienvenid@ `, 'Registrado Correctamente', 'success');
           this.rutas.navigate(["/login"]);
@@ -75,5 +48,13 @@ this.usuario.carnet_discapacidad = this.registerForm.value.carnet_discapacidad;
     } else {
       console.log('Formulario no válido');
     }
+  }
+  
+   //volver al login
+   volverAlLogin(): void {
+    this.rutas.navigate(['/login']);
+  }
+  ngOnInit(): void {
+    
   }
 }

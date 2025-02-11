@@ -17,6 +17,7 @@ export class RegistrarUsuService {
 
     //Crear usuarios
     create(registra_usu: usuario_registro): Observable<usuario_registro> {
+      console.log(registra_usu)
       return this.http.post<usuario_registro>(`${this.urlBase}/usuario`, registra_usu, { headers: this.httpHeaders })
     }
 
