@@ -6,7 +6,7 @@ body {
 
 .menu {
     background-color: #ffebcd;
-    border: 2px solid #ff69b4;
+    border: 2px solid #fb7b44;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,23 +47,23 @@ body {
 
 .navbar-brand {
     font-size: 1.5em;
-    color: #ff69b4;
+    color: #f36d41;
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #ff69b4;
+    color: #fb6e43;
     font-size: 1.2em;
     padding: 10px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    background-color: #ff69b4;
+    background-color: #f36d41;
     color: #fff;
     border-radius: 10px;
 }
 
 .navbar-toggler {
-    border-color: #ff69b4;
+    border-color: #f36d41;
 }
 
 .navbar-toggler-icon {
@@ -75,32 +75,32 @@ body {
 }
 
 .navbar {
-    background-color: #ffebcd;
-    border: 2px solid #ff69b4;
-    border-radius: 15px;
+    background-color: #cdf3ff;
+    border: 2px solid #ff6f61;
+    border-radius: 0px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
     font-size: 1.5em;
-    color: #ff69b4;
+    color: #ff6f61;
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #ff69b4;
+    color: #ff6f61;
     font-size: 1.2em;
     padding: 10px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    background-color: #ff69b4;
+    background-color: #ff6f61;
     color: #fff;
     border-radius: 10px;
 }
 
 .navbar-toggler {
-    border-color: #ff69b4;
+    border-color: #ff6f61;
 }
 
 .navbar-toggler-icon {
