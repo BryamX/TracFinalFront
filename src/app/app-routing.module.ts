@@ -16,6 +16,7 @@ import { TraduccionComponent } from './traduccion/traduccion.component';
 import { EducacionComponent } from './Pages/educacion/educacion.component';
 import { EditarCrudComponent } from './Pages/editar-crud/editar-crud.component';
 import { ComoesComponent } from './Pages/comoes/comoes.component';
+import { CaComponent } from './Pages/categorias_aprendizajes/ca.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
@@ -46,6 +47,11 @@ const routes: Routes = [
     path:"editar-usuario",
     component:EditarCrudComponent
   }
+,
+{
+  path:"categorias+aprendizajes",
+  component:CaComponent
+}
 
 ];
 
