@@ -52,6 +52,12 @@ export class RegistrarCatService {
         catchError(this.handleError)
       );
     }
+
+    addAprendizajeToCategoria(categoriaId: number, aprendizajeId: number): Observable<any> {
+
+      return this.http.post<any>(`${this.urlBase}/Categoria/${categoriaId}/Aprendizaje`, { aprendizajeId });
+  
+    }
   
     // Manejo de errores
     private handleError(error: any): Observable<never> {

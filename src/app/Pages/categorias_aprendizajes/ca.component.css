@@ -1,0 +1,100 @@
+h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff69b4;
+    text-align: center;
+  }
+
+
+  .aprendizaje-block {
+    background-color: #f0e68c;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .aprendizaje-block:hover {
+    transform: scale(1.05);
+  }
+
+  .aprendizaje-block p {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #4682b4;
+  } 
+  
+  .categoria-block {
+    background-color: #f0e68c;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  
+  .categoria-block:hover {
+    transform: scale(1.05);
+  }
+  
+  .categoria-block h3 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff4500;
+  }
+  
+  .categoria-block p {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #4682b4;
+  }
+  
+  form {
+    background-color: #f0f8ff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff4500;
+  }
+  
+  .form-control {
+    border: 2px solid #ff69b4;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  .btn {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  .btn-primary {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #4682b4;
+    border: none;
+    color: white;
+  }
+
+  
+
+  .aprendizaje-item p{
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #30d851;
+  }
+  

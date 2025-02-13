@@ -1,0 +1,45 @@
+<h2>Lista de Aprendizajes Registrados</h2>
+<ul>
+  <li *ngFor="let aprendizaje of aprendizajes" class="aprendizaje-block"(click)="onSelectAprendizaje(aprendizaje)">
+    <p>{{ aprendizaje.nombre_aprendizaje }} (ID: {{ aprendizaje.id_aprendizaje }})</p>
+  </li>
+</ul>
+
+<h2>Categorías de Aprendizajes</h2>
+<div *ngFor="let categoria of categorias" class="categoria-block" (click)="onSelectCategoria(categoria)">
+  <h3>{{ categoria.nombre_categoria }}</h3>
+  <p>{{ categoria.descripcion }}</p>
+  <ul>
+    <li *ngFor="let aprendizaje of categoria.aprendizajes" class="aprendizaje-item"> 
+      <p>{{ aprendizaje.nombre_aprendizaje }} (ID: {{ aprendizaje.id_aprendizaje }})</p>
+    
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedCategoria">
+  <h2>Editar Categoría</h2>
+  <form [formGroup]="categoriaForm" (ngSubmit)="updateCategoria()">
+    <div class="form-group">
+      <label for="nombre_categoria">Nombre</label>
+      <input type="text" id="nombre_categoria" formControlName="nombre_categoria" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
+    </div>
+    <h2>Aprendizajes Seleccionados</h2>
+    <ul>
+      <li *ngFor="let aprendizaje of nuevoCategoria.aprendizajes" class="aprendizaje-item"> 
+       <p> {{ aprendizaje.nombre_aprendizaje }} (ID: {{ aprendizaje.id_aprendizaje }})
+        <button (click)="removeAprendizaje(aprendizaje)" class="btn btn-secondary">Eliminar</button>
+      </p>
+      </li>
+    </ul>
+    <button type="submit" class="btn btn-primary" [disabled]="!categoriaForm.valid || isLoading">Guardar</button>
+  </form>
+</div>
+
+<div *ngIf="isLoading" class="loading-indicator">
+  <p>Cargando...</p>
+</div>

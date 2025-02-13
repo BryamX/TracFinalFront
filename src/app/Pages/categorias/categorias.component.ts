@@ -22,8 +22,9 @@ interface Categoria{
 })
 export class CategoriasComponent implements OnInit {
 nuevoCategoria:{
-  nombre_categoria: string; descripcion: string; aprendizajes: Aprendizaje[];} ={
-nombre_categoria:'',
+  id_categoria: number, nombre_categoria: string; descripcion: string; aprendizajes: Aprendizaje[];} ={
+id_categoria: 0,
+    nombre_categoria:'',
 descripcion:'',
 aprendizajes: []
   };
@@ -53,6 +54,7 @@ aprendizajes: []
     this.registrarCatService.create(categoria).subscribe(( categoria: Categoria) =>{
       this.categorias.push(categoria);
     this.nuevoCategoria = {
+      id_categoria:0,
       nombre_categoria:'',
       descripcion: '',
       aprendizajes:[]
@@ -67,7 +69,7 @@ aprendizajes: []
       next: (categorias) => {
         this.categorias = categorias; // Asignar los Categorias obtenidos al array
       },
-      error: (error) => {
+      error: (error: any) => {
         this.errorMessage = error.message; // Mostrar mensaje de error si ocurre alguno
       }
     });
@@ -79,27 +81,34 @@ aprendizajes: []
       this.registrarCatService.delete(categoria.id_categoria).subscribe(() => {
         this.categorias = this.categorias.filter(c => c.id_categoria !== categoria.id_categoria);
       });
+    }
   }
-}
 
   // Método para actualizar un Categoria
-//   updateCategoria(): void {
-//     if (!this.Categoria.nombre_Categoria || !this.Categoria.descripcion) {
-//       this.errorMessage = 'Debe completar todos los campos para actualizar'; // Validación para actualizar
-//       return;
-//     }
+  updateCategoria(): void {
+    if (!this.nuevoCategoria.nombre_categoria || !this.nuevoCategoria.descripcion) {
+      this.errorMessage = 'Debe completar todos los campos para actualizar'; // Validación para actualizar
+      return;
+    }
 
-//     this.registrarNivService.updateCategoria(this.Categoria).subscribe({
-//       next: (CategoriaActualizado) => {
-//         const index = this.Categorias.findIndex(Categoria => Categoria.id_Categoria === CategoriaActualizado.id_Categoria);
-//         if (index !== -1) {
-//           this.Categorias[index] = CategoriaActualizado; // Actualizar el Categoria en la lista
-//         }
-//         this.Categoria = new Categoria(); // Limpiar el formulario
-//       },
-//       error: (error) => {
-//         this.errorMessage = error.message; // Mostrar mensaje de error si la actualización falla
-//       }
-//     });
-//   }
+    if (this.nuevoCategoria.id_categoria) {
+      this.registrarCatService.updateCategoria(this.nuevoCategoria).subscribe({
+        next: (categoriaActualizado: Categoria) => {
+          const index = this.categorias.findIndex(categoria => categoria.id_categoria === categoriaActualizado.id_categoria);
+          if (index !== -1) {
+            this.categorias[index] = categoriaActualizado; // Actualizar el Categoria en la lista
+          }
+          this.nuevoCategoria = {
+            id_categoria:0,
+            nombre_categoria: '',
+            descripcion: '',
+            aprendizajes: []
+          }; // Limpiar el formulario
+        },
+        error: (error: any) => {
+          this.errorMessage = error.message; // Mostrar mensaje de error si la actualización falla
+        }
+      });
+    }
+  }
 }
