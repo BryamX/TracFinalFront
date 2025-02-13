@@ -1,100 +1,218 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Eliminar barras de desplazamiento */
+}
+
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffebcd; /* Fondo color crema */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinear contenido al inicio */
+  box-sizing: border-box; /* Asegurar que el padding se incluya en el tamaño total del elemento */
+  overflow-y: auto; /* Habilitar desplazamiento vertical */
+}
+
+.container h2, .container h3 {
+  text-align: center;
+  color: #ff6347; /* Color de texto más vibrante */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente amigable */
+}
+
+.aprendizaje-list, .aprendizaje-item-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center; /* Centrar el contenido */
+}
+
+.aprendizaje-block, .aprendizaje-item, .categoria-block {
+  display: inline-block;
+  max-width: 300px; /* Ajustar al contenido */
+  margin: 10px 5px; /* Espacio horizontal reducido */
+  padding: 10px;
+  border: 1px solid #ffa07a;
+  border-radius: 8px;
+  background-color: #fffaf0; /* Fondo más claro */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.aprendizaje-block:hover, .aprendizaje-item:hover, .categoria-block:hover {
+  background-color: #ffdfd4; /* Fondo al pasar el cursor */
+  transform: scale(1.05);
+}
+
+.aprendizaje-block p, .aprendizaje-item p, .categoria-block h3, .categoria-block p {
+  margin: 5px 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente amigable */
+  color: #4682b4; /* Color de texto */
+}
+
+.edit-categoria {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 2px solid #ffa07a;
+  background-color: #fffaf0; /* Fondo color crema */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-categoria .form-group {
+  margin-bottom: 15px;
+}
+
+.edit-categoria label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ff4500; /* Color de texto más vibrante */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente amigable */
+}
+
+.edit-categoria input, .edit-categoria textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ff69b4;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fffaf0;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #ff4500;
+}
+
+.btn-secondary {
+  background-color: #4682b4;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.loading-indicator {
+  margin-top: 20px;
+  text-align: center;
+  color: #ff6347;
+}
+
+/* Estilos adicionales */
 h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #ff69b4;
-    text-align: center;
-  }
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff69b4;
+  text-align: center;
+}
 
+.aprendizaje-block {
+  background-color: #f0e68c;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-  .aprendizaje-block {
-    background-color: #f0e68c;
-    border: 2px solid #ff69b4;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
+.aprendizaje-block:hover {
+  transform: scale(1.05);
+}
 
-  .aprendizaje-block:hover {
-    transform: scale(1.05);
-  }
+.aprendizaje-block p {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #4682b4;
+} 
 
-  .aprendizaje-block p {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #4682b4;
-  } 
-  
-  .categoria-block {
-    background-color: #f0e68c;
-    border: 2px solid #ff69b4;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
+.categoria-block {
+  background-color: #f0e68c;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-  
-  .categoria-block:hover {
-    transform: scale(1.05);
-  }
-  
-  .categoria-block h3 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #ff4500;
-  }
-  
-  .categoria-block p {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #4682b4;
-  }
-  
-  form {
-    background-color: #f0f8ff;
-    border: 2px solid #ff69b4;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #ff4500;
-  }
-  
-  .form-control {
-    border: 2px solid #ff69b4;
-    border-radius: 5px;
-    padding: 10px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-  }
-  
-  .btn {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    border-radius: 5px;
-    padding: 10px 20px;
-  }
-  
-  .btn-primary {
-    background-color: #ff69b4;
-    border: none;
-    color: white;
-  }
-  
-  .btn-secondary {
-    background-color: #4682b4;
-    border: none;
-    color: white;
-  }
+.categoria-block:hover {
+  transform: scale(1.05);
+}
 
-  
+.categoria-block h3 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff4500;
+}
 
-  .aprendizaje-item p{
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #30d851;
-  }
-  
+.categoria-block p {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #4682b4;
+}
+
+form {
+  background-color: #f0f8ff;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff4500;
+}
+
+.form-control {
+  border: 2px solid #ff69b4;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.btn {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #4682b4;
+  border: none;
+  color: white;
+}
+
+.aprendizaje-item p {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #30d851;
+}

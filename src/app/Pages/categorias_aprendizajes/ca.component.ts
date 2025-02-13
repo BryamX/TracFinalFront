@@ -121,13 +121,19 @@ export class CaComponent implements OnInit {
     }
   }
 
+
   onSelectCategoria(categoria: any) {
-    this.selectedCategoria = categoria;
-    this.nuevoCategoria = { ...categoria };
-    this.categoriaForm.patchValue({
-      nombre_categoria: categoria.nombre_categoria,
-      descripcion: categoria.descripcion
-    });
+    // Si la categoría seleccionada es la misma que la actual, deseleccionarla
+    if (this.selectedCategoria === categoria) {
+      this.selectedCategoria = null;
+    } else {
+      this.selectedCategoria = categoria;
+      // Rellenar el formulario con los datos de la categoría seleccionada
+      this.categoriaForm.patchValue({
+        nombre_categoria: categoria.nombre_categoria,
+        descripcion: categoria.descripcion
+      });
+    }
   }
 
   onSelectAprendizaje(aprendizaje: Aprendizaje) {
