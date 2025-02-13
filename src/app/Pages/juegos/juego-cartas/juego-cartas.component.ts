@@ -14,44 +14,149 @@ export class JuegoCartasComponent {
 
   cartas = [
     {
-      imagen: 'https://static.vecteezy.com/system/resources/previews/002/594/555/non_2x/sign-language-hand-gesture-indicating-a-letter-line-and-fill-icon-free-vector.jpg', // Cambia por la ruta correcta de la imagen
+      imagen: 'a.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'A',
       opciones: ['A', 'B', 'C']
     },
     {
-      imagen: 'https://images.vexels.com/media/users/3/164128/isolated/preview/278eb7fbb228da457dd63f539142964e-mano-dedo-b-letra-b-ilustracion.png', // Cambia por la ruta correcta de la imagen
+      imagen: 'b.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'B',
       opciones: ['O', 'B', 'W']
     },
     {
-      imagen: 'https://png.pngtree.com/png-clipart/20231025/original/pngtree-display-of-american-sign-language-letter-c-demonstrated-by-a-photo-png-image_13423866.png', // Otra carta con una imagen diferente
+      imagen: 'c.png', // Otra carta con una imagen diferente
       respuestaCorrecta: 'C',
       opciones: ['R', '9', 'C']
     },
     {
-      imagen: 'https://static.vecteezy.com/system/resources/previews/002/594/560/non_2x/sign-language-hand-gesture-indicating-d-letter-line-and-fill-icon-free-vector.jpg', // Cambia por la ruta correcta de la imagen
+      imagen: 'ch.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'CH',
+      opciones: ['C', 'CH', 'RR']
+    },
+    {
+      imagen: 'd.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'D',
       opciones: ['1', 'D', 'L']
     },
     {
-      imagen: 'https://as1.ftcdn.net/jpg/03/74/53/52/1000_F_374535201_bXlYXmaHzf00ju8h04vmsnnavqtLnjrF.jpg', // Cambia por la ruta correcta de la imagen
+      imagen: 'e.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'E',
       opciones: ['E', 'H', 'Ñ']
     },
     {
-      imagen: 'https://previews.123rf.com/images/khalide91/khalide911912/khalide91191200337/135101777-deletreo-con-los-dedos-del-alfabeto-en-lenguaje-de-se%C3%B1as-americano-asl-la-letra-f-vector.jpg', // Cambia por la ruta correcta de la imagen
+      imagen: 'f.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'F',
       opciones: ['X', 'F', 'T']
     },
     {
-      imagen: 'https://st.depositphotos.com/1029434/4867/v/450/depositphotos_48671279-stock-illustration-sign-language-and-the-alphabetthe.jpg', // Cambia por la ruta correcta de la imagen
+      imagen: 'g.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'G',
       opciones: ['G', 'M', 'R']
     },
     {
-      imagen: 'https://lh5.googleusercontent.com/proxy/WV8VHUCb_ofRnkExT2ydA0irJmJ4stoTc1Vl7oIqZ1-RwIcPU_9D53MyVK8KIdIB9VZy53R7uqbgpzjlCZJgu_aOG0HOl1cIuBs', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'CH',
-      opciones: ['C', 'CH', 'RR']
+      imagen: 'h.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'H',
+      opciones: ['H', 'CH', 'P']
+    },
+    {
+      imagen: 'i.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'I',
+      opciones: ['Z', 'L', 'I']
+    },
+    {
+      imagen: 'j.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'J',
+      opciones: ['J', 'M', 'Q']
+    },
+    {
+      imagen: 'k.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'K',
+      opciones: ['K', 'O', 'B']
+    },
+    {
+      imagen: 'l.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'L',
+      opciones: ['7', 'S', 'L']
+    },
+    {
+      imagen: 'm.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'M',
+      opciones: ['8', 'M', 'Y']
+    },
+    {
+      imagen: 'n.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'N',
+      opciones: ['4', 'Z', 'N']
+    },
+    {
+      imagen: 'ñ.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'Ñ',
+      opciones: ['Ñ', 'T', 'S']
+    },
+    {
+      imagen: 'o.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'O',
+      opciones: ['E', 'W', 'O']
+    },
+    {
+      imagen: 'p.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'P',
+      opciones: ['5', '2', 'P']
+    },
+    {
+      imagen: 'q.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'Q',
+      opciones: ['Q', 'J', 'U']
+    },
+    {
+      imagen: 'r.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'R',
+      opciones: ['R', 'K', 'O']
+    },
+    {
+      imagen: 'rr.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'RR',
+      opciones: ['RR', 'E', 'G']
+    },
+    {
+      imagen: 's.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'S',
+      opciones: ['V', 'S', 'H']
+    },
+    {
+      imagen: 't.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'T',
+      opciones: ['X', 'T', 'U']
+    },
+    {
+      imagen: 'u.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'U',
+      opciones: ['R', '3', 'U']
+    },
+    {
+      imagen: 'v.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'V',
+      opciones: ['W', 'B', 'V']
+    },
+    {
+      imagen: 'w.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'W',
+      opciones: ['A', 'Y', 'W']
+    },
+    {
+      imagen: 'x.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'X',
+      opciones: ['D', 'J', 'X']
+    },
+    {
+      imagen: 'y.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'Y',
+      opciones: ['Y', '6', 'P']
+    },
+    {
+      imagen: 'z.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'Z',
+      opciones: ['Z', 'Ñ', 'Q']
     }
   ];
 
@@ -69,12 +174,12 @@ export class JuegoCartasComponent {
 
   seleccionarOpcion(opcion: string) {
     if (opcion === this.cartaActual.respuestaCorrecta) {
-      this.mensaje = '🎉 ¡Correcto! Volteando otra carta...';
+      this.mensaje = '🎉 ¡Correcto! Volteando otra carta...🤖';
       setTimeout(() => {
         this.nuevaRonda();
       }, 1500); // Espera 1.5 segundos antes de cambiar la carta
     } else {
-      this.mensaje = '❌ Incorrecto, intenta de nuevo.';
+      this.mensaje = '😝 Incorrecto, intenta de nuevo. 🫣';
     }
   }
 
