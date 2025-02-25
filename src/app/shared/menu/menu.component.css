@@ -4,15 +4,16 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.menu {
+.menu, .navbar {
     background-color: #ffebcd;
     border: 2px solid #fb7b44;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.menu-item {
+.menu-item, .navbar-nav .nav-item .nav-link {
     color: #ff4500;
     font-size: 18px;
     padding: 10px;
@@ -23,26 +24,14 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.menu-item:hover {
+.menu-item:hover, .navbar-nav .nav-item .nav-link:hover {
     background-color: #ffdab9;
     transform: scale(1.1);
 }
 
-.menu-item:active {
+.menu-item:active, .navbar-nav .nav-item .nav-link:active {
     background-color: #ffdead;
     transform: scale(1.05);
-}/* Estilo amigable y entretenido para niños */
-body {
-    background-color: #f0f8ff;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-.navbar {
-    background-color: #ffebcd;
-    border: 2px solid #f25b1b;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -50,57 +39,8 @@ body {
     color: #f36d41;
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: #fb6e43;
-    font-size: 1.2em;
-    padding: 10px;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    background-color: #f36d41;
-    color: #fff;
-    border-radius: 10px;
-}
-
 .navbar-toggler {
     border-color: #f36d41;
-}
-
-.navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 105, 180, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
-}/* Estilo amigable y entretenido para niños */
-body {
-    background-color: #f0f8ff;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
-.navbar {
-    background-color: #cdf3ff;
-    border: 2px solid #ff6f61;
-    border-radius: 0px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    font-size: 1.5em;
-    color: #ff6f61;
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: #ff6f61;
-    font-size: 1.2em;
-    padding: 10px;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    background-color: #ff6f61;
-    color: #fff;
-    border-radius: 10px;
-}
-
-.navbar-toggler {
-    border-color: #ff6f61;
 }
 
 .navbar-toggler-icon {

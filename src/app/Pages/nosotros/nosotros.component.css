@@ -1,163 +1,164 @@
 /* Estilos generales */
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #ff7b7b, #ffeb61);
-    color: #4a4a4a;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Encabezado */
-  header {
-    background-color: #ff6f61;
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-  
-  header h1 {
-    font-size: 3.5rem;
-    color: white;
-    text-shadow: 2px 2px #333;
-  }
-  
-  .subtitle {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: 300;
-    margin-top: 10px;
-  }
-  
-  /* Sección Acerca de */
-  .about {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-  
-  .about h2 {
-    font-size: 2.5rem;
-    color: #ff6f61;
-  }
-  
-  .about p {
-    font-size: 1.2rem;
-    color: #4a4a4a;
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  /* Sección de Características */
-  .features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-  }
-  
-  .feature {
-    width: 30%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .feature img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .feature p {
-    font-size: 1.1rem;
-    color: #4a4a4a;
-  }
-  
-  /* Pie de página */
-  footer {
-    background-color: #ff6f61;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-  
-  footer p {
-    font-size: 1rem;
-  }
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('/src/assets/fondo_ls.jpg') no-repeat center center fixed;
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+ 
+  color: #4a4a4a;
+}
 
-  /* Estilos para la sección del equipo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  text-align: center;
+}
+
+/* Encabezado */    
+header {
+  background-color: #8d180e;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 2px 2px #333;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* Sección Acerca de */
+.about {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #ff6f61;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Sección de Características */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.feature {
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.feature img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}
+
+/* Pie de página */
+footer {
+  background-color: #ff6f61;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Estilos para la sección del equipo */
 .team {
-    padding: 40px 20px;
-    background-color: #fff6e6;
-    border-radius: 10px;
-    margin-top: 30px;
-  }
-  
-  .team h2 {
-    font-size: 2.5rem;
-    color: #ff6f61;
-    margin-bottom: 20px;
-  }
-  
-  .team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    width: 18%;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-10px); /* Efecto al pasar el ratón */
-  }
-  
-  .team-member img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    
-  }
-  
-  .team-member h3 {
-    font-size: 1.5rem;
-    color: #ff6f61;
-  }
-  
-  .team-member p {
-    font-size: 1.1rem;
-    color: #4a4a4a;
-  }
-  
-  .feature {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .feature:hover {
-    transform: scale(1.1);
-  }
-  
+  padding: 40px 20px;
+  background-color: #fff6e6;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 18%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Efecto al pasar el ratón */
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #ff6f61;
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}
+
+.feature {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: scale(1.1);
+}

@@ -15,13 +15,10 @@ export class RegistrarAprService {
     constructor(private http: HttpClient) {}
 
     //Crear Aprendizajes
-    create(Aprendizaje: Aprendizaje): Observable<Aprendizaje> {
-      return this.http.post<Aprendizaje>(`${this.urlBase}/Aprendizaje`, Aprendizaje, { 
-        headers: new HttpHeaders ({
-          'Content-Type': 'application/json'
-
-        })})
-    }
+    create(Aprendizaje: FormData): Observable<Aprendizaje> {
+      return this.http.post<Aprendizaje>(`${this.urlBase}/Aprendizaje`, Aprendizaje);
+    }
+  
 
   
     // Obtener todos los Aprendizajes

@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Categoria } from '../../Services/registrar_categoria/Categoria';
+import { Aprendizaje } from '../../Services/registrar_aprendizajes/Aprendizaje';
 import { RegistrarCatService } from '../../Services/registrar_categoria/registrar-cat.service';
 import { RegistrarAprService } from '../../Services/registrar_aprendizajes/registrar-apr.service';
-import { Aprendizaje } from '../../Services/registrar_aprendizajes/Aprendizaje';
-import { ChangeDetectorRef } from '@angular/core';
 
-interface Categoria {
-  id_categoria?: number;
-  nombre_categoria: string;
-  descripcion: string;
-  aprendizajes: Aprendizaje[];
-}
 
 @Component({
   selector: 'app-ca',
@@ -19,31 +13,18 @@ interface Categoria {
   styleUrls: ['./ca.component.css']
 })
 export class CaComponent implements OnInit {
-  nuevoCategoria: {
-    id_categoria: number;
-    nombre_categoria: string;
-    descripcion: string;
-    aprendizajes: Aprendizaje[];
-  } = {
-    id_categoria: 0,
-    nombre_categoria: '',
-    descripcion: '',
-    aprendizajes: []
-  };
-
-  aprendizajes: Aprendizaje[] = [];
   categorias: Categoria[] = [];
-  selectedCategoria: any = null;
-  categoriaForm: FormGroup;
-  nuevoAprendizaje: string = '';
+  aprendizajes: Aprendizaje[] = [];
+  selectedCategoria: Categoria | null = null;
+  nuevoCategoria: Categoria = { id_categoria: 0, nombre_categoria: '', descripcion: '', aprendizajes: [] };
   errorMessage: string = '';
   isLoading: boolean = false;
+  categoriaForm: FormGroup;
 
   constructor(
-    private registrarAprService: RegistrarAprService,
     private registrarCatService: RegistrarCatService,
-    private fb: FormBuilder,
-    private cd: ChangeDetectorRef
+    private registrarAprService: RegistrarAprService,
+    private fb: FormBuilder
   ) {
     this.categoriaForm = this.fb.group({
       nombre_categoria: ['', Validators.required],
@@ -51,7 +32,7 @@ export class CaComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getCategoria();
     this.getAprendizajes();
   }
@@ -61,7 +42,7 @@ export class CaComponent implements OnInit {
       next: (categorias) => {
         this.categorias = categorias;
       },
-      error: (error: any) => {
+      error: (error) => {
         this.errorMessage = error.message;
         alert('Error al obtener las categorías: ' + this.errorMessage);
       }
@@ -80,69 +61,76 @@ export class CaComponent implements OnInit {
     });
   }
 
+  onSelectCategoria(categoria: Categoria | null): void {
+    if (!categoria || this.selectedCategoria === categoria) {
+      this.selectedCategoria = null;
+      this.nuevoCategoria = { id_categoria: 0, nombre_categoria: '', descripcion: '', aprendizajes: [] };
+    } else {
+      this.selectedCategoria = categoria;
+      this.categoriaForm.patchValue({
+        nombre_categoria: categoria.nombre_categoria,
+        descripcion: categoria.descripcion
+      });
+      this.nuevoCategoria = Object.assign({}, categoria);
+    }
+  }
+
+  onSelectAprendizaje(aprendizaje: Aprendizaje): void {
+    if (!aprendizaje?.id_aprendizaje) return;
+    if (!this.nuevoCategoria.aprendizajes) {
+      this.nuevoCategoria.aprendizajes = [];
+    }
+    const existe = this.nuevoCategoria.aprendizajes.some(a => a.id_aprendizaje === aprendizaje.id_aprendizaje);
+    if (!existe) {
+      this.nuevoCategoria.aprendizajes.push(aprendizaje);
+    } else {
+      alert('El aprendizaje ya ha sido agregado.');
+    }
+  }
+
+
   updateCategoria(): void {
     if (!this.categoriaForm.valid) {
       this.errorMessage = 'Debe completar todos los campos para actualizar';
       alert(this.errorMessage);
       return;
     }
-
-    // Asigna los valores del formulario a `nuevoCategoria`
+    if (!this.nuevoCategoria.id_categoria) {
+      alert('Seleccione una categoría antes de actualizar.');
+      return;
+    }
     this.nuevoCategoria.nombre_categoria = this.categoriaForm.get('nombre_categoria')?.value;
     this.nuevoCategoria.descripcion = this.categoriaForm.get('descripcion')?.value;
-
+    this.nuevoCategoria.aprendizajes = this.nuevoCategoria.aprendizajes || [];
     this.isLoading = true;
-    if (this.nuevoCategoria.id_categoria) {
-      console.log('Datos enviados para actualizar:', this.nuevoCategoria);
-      this.registrarCatService.updateCategoria(this.nuevoCategoria).subscribe({
-        next: (categoriaActualizado: Categoria) => {
-          const index = this.categorias.findIndex(categoria => categoria.id_categoria === categoriaActualizado.id_categoria);
-          if (index !== -1) {
-            this.categorias[index] = categoriaActualizado;
-            this.cd.detectChanges();
-          }
-          this.nuevoCategoria = {
-            id_categoria: 0,
-            nombre_categoria: '',
-            descripcion: '',
-            aprendizajes: []
-          };
-          this.isLoading = false;
-          alert('Categoría actualizada correctamente');
-          console.log('Categoría actualizada:', categoriaActualizado);
-        },
-        error: (error: any) => {
-          this.errorMessage = error.message;
-          this.isLoading = false;
-          alert('Error al actualizar la categoría: ' + this.errorMessage);
-          console.error('Error al actualizar la categoría:', error);
+
+    this.registrarCatService.updateCategoria(this.nuevoCategoria).subscribe({
+      next: (categoriaActualizado: Categoria) => {
+        const index = this.categorias.findIndex(categoria => categoria.id_categoria === categoriaActualizado.id_categoria);
+        if (index !== -1) {
+          this.categorias[index] = categoriaActualizado;
+          this.selectedCategoria = categoriaActualizado;
+          this.categoriaForm.patchValue({
+            nombre_categoria: categoriaActualizado.nombre_categoria,
+            descripcion: categoriaActualizado.descripcion,
+          });
         }
-      });
-    }
-  }
-
-
-  onSelectCategoria(categoria: any) {
-    // Si la categoría seleccionada es la misma que la actual, deseleccionarla
-    if (this.selectedCategoria === categoria) {
-      this.selectedCategoria = null;
-    } else {
-      this.selectedCategoria = categoria;
-      // Rellenar el formulario con los datos de la categoría seleccionada
-      this.categoriaForm.patchValue({
-        nombre_categoria: categoria.nombre_categoria,
-        descripcion: categoria.descripcion
-      });
-    }
-  }
-
-  onSelectAprendizaje(aprendizaje: Aprendizaje) {
-    if (!this.nuevoCategoria.aprendizajes.some(a => a.id_aprendizaje === aprendizaje.id_aprendizaje)) {
-      this.nuevoCategoria.aprendizajes.push(aprendizaje);
-    }
+        alert('Categoría actualizada correctamente');
+        this.isLoading = false;
+      },
+      error: (error: any) => {
+        this.errorMessage = error.message;
+        this.isLoading = false;
+        alert('Error al actualizar la categoría: ' + this.errorMessage);
+      }
+    });
   }
 
   removeAprendizaje(aprendizaje: Aprendizaje) {
     this.nuevoCategoria.aprendizajes = this.nuevoCategoria.aprendizajes.filter(a => a.id_aprendizaje !== aprendizaje.id_aprendizaje);
+    console.log('Aprendizajes después de eliminar:', this.nuevoCategoria.aprendizajes);
   }
 }
+
+ 
+

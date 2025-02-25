@@ -28,6 +28,8 @@ import { JuegoAtrapaSenasComponent } from './Pages/juegos/juego-atrapa-senas/jue
 import { EditarCrudComponent } from './Pages/editar-crud/editar-crud.component';
 import { ComoesComponent } from './Pages/comoes/comoes.component'; // Asegúrate de importarlo aquí
 import { CaComponent } from './Pages/categorias_aprendizajes/ca.component';
+import { CuestionarioComponent } from './Pages/Cuestionarios/cuestionario.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { CaComponent } from './Pages/categorias_aprendizajes/ca.component';
     JuegoAtrapaSenasComponent,
     EditarCrudComponent,
     ComoesComponent,
-    CaComponent
+    CaComponent,
+    CuestionarioComponent,
+    ComentariosComponent
      // Debería estar aquí en 'declarations'
   ],
   imports: [

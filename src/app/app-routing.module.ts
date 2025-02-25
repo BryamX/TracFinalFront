@@ -17,6 +17,8 @@ import { EducacionComponent } from './Pages/educacion/educacion.component';
 import { EditarCrudComponent } from './Pages/editar-crud/editar-crud.component';
 import { ComoesComponent } from './Pages/comoes/comoes.component';
 import { CaComponent } from './Pages/categorias_aprendizajes/ca.component';
+import { CuestionarioComponent } from './Pages/Cuestionarios/cuestionario.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" }, // Redirección al Login al iniciar
@@ -51,7 +53,15 @@ const routes: Routes = [
 {
   path:"categorias+aprendizajes",
   component:CaComponent
-}
+},
+{
+path:"cuestionario",
+component:CuestionarioComponent
+},
+{
+  path:"comentarios",
+  component:ComentariosComponent
+  }
 
 ];
 

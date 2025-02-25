@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Cuestionario de Lengua de Señas</h1>
+
+  <!-- Sección para mostrar el progreso -->
+  <div class="progress">
+    <span>Sección {{ currentSection }} de 4</span>
+  </div>
+
+  <!-- Sección de preguntas -->
+  <div *ngIf="currentSection === 1">
+    <div class="question-box">
+      <img [src]="questionImages[0]" alt="Pregunta 1" class="question-img">
+      <p>¿Qué letra es esta?</p>
+      <div *ngFor="let option of questionOptions[0]; let i = index">
+        <button (click)="checkAnswer(0, i)">{{ removePngExtension(option) }}</button>
+      </div>
+      <p *ngIf="messages[0]">{{ messages[0] }}</p> <!-- Mensaje de respuesta -->
+    </div>
+  </div>
+
+  <div *ngIf="currentSection === 2">
+    <div class="question-box">
+      <img [src]="questionImages[1]" alt="Pregunta 2" class="question-img">
+      <p>¿Qué letra es esta?</p>
+      <div *ngFor="let option of questionOptions[1]; let i = index">
+        <button (click)="checkAnswer(1, i)">{{ removePngExtension(option) }}</button>
+      </div>
+      <p *ngIf="messages[1]">{{ messages[1] }}</p> <!-- Mensaje de respuesta -->
+    </div>
+  </div>
+
+  <div *ngIf="currentSection === 3">
+    <div class="question-box">
+      <img [src]="questionImages[2]" alt="Pregunta 3" class="question-img">
+      <p>¿Qué letra es esta?</p>
+      <div *ngFor="let option of questionOptions[2]; let i = index">
+        <button (click)="checkAnswer(2, i)">{{ removePngExtension(option) }}</button>
+      </div>
+      <p *ngIf="messages[2]">{{ messages[2] }}</p> <!-- Mensaje de respuesta -->
+    </div>
+  </div>
+
+  <!-- Sección final - Certificado -->
+  <div *ngIf="currentSection === 4">
+    <h2>¡Felicidades! Has completado el cuestionario.</h2>
+    <button (click)="generateCertificate()">Generar Certificado</button>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="comments-section">
+    <h2>¡Dinos qué opinas!</h2>
+    <textarea [(ngModel)]="newComment" placeholder="Deja tu comentario aquí..." rows="4" class="comment-input"></textarea>
+    <button (click)="submitComment()">Enviar Comentario</button>
+  
+    <div *ngIf="comments.length > 0" class="comments-list">
+      <h3>Comentarios Recientes:</h3>
+      <ul>
+        <li *ngFor="let comment of comments">{{ comment }}</li>
+      </ul>
+    </div>
+  </div>
+  

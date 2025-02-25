@@ -1,0 +1,165 @@
+/* Contenedor principal */
+.container {
+  text-align: center;
+  padding: 30px;
+  border: 5px solid #FF6347; /* Rojo brillante */
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #FFEB3B; /* Amarillo brillante */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #FF6347; /* Rojo brillante */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Cuadro de la pregunta */
+.question-box {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 3px solid #FF6347;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: bounce 0.5s ease-in-out; /* Animación divertida */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Imagen de la pregunta */
+.question-img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.question-img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo de las opciones de respuesta */
+button {
+  background-color: #FF6347; /* Rojo brillante */
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  width: 100%;
+  max-width: 320px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #FF4500; /* Naranja brillante */
+  transform: translateY(-3px);
+}
+
+button:active {
+  background-color: #FF5733; /* Rojo más fuerte */
+  transform: translateY(2px);
+}
+
+/* Barra de progreso */
+.progress {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF6347;
+  background-color: #FFF;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  height: 60px; /* También puedes definir una altura fija */
+
+}
+
+/* Mensajes de respuesta */
+p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 10px;
+}
+
+p.success {
+  color: #28a745;
+}
+
+p.error {
+  color: #dc3545;
+}
+
+/* Sección final - Certificado */
+h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #FF6347;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+}
+
+/* Botón para generar el certificado */
+button.generate-certificate {
+  background-color: #28a745;
+  padding: 18px 35px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.generate-certificate:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+button.generate-certificate:active {
+  background-color: #1e7e34;
+  transform: translateY(2px);
+}
+
+/* Estilos para los botones deshabilitados */
+button:disabled {
+  background-color: #B0C4DE; /* Gris claro */
+  cursor: not-allowed;
+}
+
+/* Fondo colorido y alegre para los botones */
+button {
+  background-color: #FF6347; /* Rojo brillante */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
