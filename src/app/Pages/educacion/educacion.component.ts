@@ -15,7 +15,7 @@ export class EducacionComponent {
   titulo: string = 'Selecciona una categoría';
   elementos: { imagen: string, nombre: string }[] = [];
 
-  // Datos de ejemplo (asegúrate de colocar imágenes reales en "assets")
+  // Datos
   abecedario = [
     { imagen: 'a.png', nombre: 'A' },
     { imagen: 'b.png', nombre: 'B' },
@@ -69,9 +69,19 @@ export class EducacionComponent {
   ];
 
   colores = [
-    { imagen: 'assets/señas/2.png', nombre: 'Amarillo🟡' },
-    { imagen: 'assets/señas/2.png', nombre: 'Azul🟦' },
-    { imagen: 'assets/señas/2.png', nombre: 'Rojo🔺' }
+    { imagen: 'amarillo.png', nombre: 'Amarillo🟡' },
+    { imagen: 'azul.png', nombre: 'Azul🟦' },
+    { imagen: 'rojo.png', nombre: 'Rojo🔺' },
+    { imagen: 'naranja.png', nombre: 'Naranja🟧' },
+    { imagen: 'blanco.png', nombre: 'Blanco🐻‍❄️' },
+    { imagen: 'brillante.png', nombre: 'Brillante✨' },
+    { imagen: 'cafe.png', nombre: 'Cafe🍪' },
+    { imagen: 'gris.png', nombre: 'Gris🩶' },
+    { imagen: 'morado.png', nombre: 'Morado🟣' },
+    { imagen: 'negro.png', nombre: 'Negro◼️' },
+    { imagen: 'oro.png', nombre: 'Dorado🥇' },
+    { imagen: 'rosa.png', nombre: 'Rosado🩷' },
+    { imagen: 'verde.png', nombre: 'Verde🌿' }
   ];
 
   objetos = [
@@ -87,8 +97,31 @@ export class EducacionComponent {
     { imagen: 'assets/señas/2.png', nombre: 'Otoño🍂' },
     { imagen: 'assets/señas/2.png', nombre: 'Invierno🥶' },
     { imagen: 'assets/señas/2.png', nombre: 'Primavera🍁' },
-    { imagen: 'assets/señas/2.png', nombre: 'Verano☀️' },
+    { imagen: 'assets/señas/2.png', nombre: 'Verano☀️' }
     ];
+
+
+    dias = [
+      { imagen: 'lunes.png', nombre: 'Lunes 1' },
+      { imagen: 'martes.png', nombre: 'Martes 2' },
+      { imagen: 'miercoles.png', nombre: 'Miercoles 3' },
+      { imagen: 'jueves.png', nombre: 'Jueves 4' },
+      { imagen: 'viernes.png', nombre: 'Viernes 5' },
+      { imagen: 'sabado.png', nombre: 'Sabedo 6' },
+      { imagen: 'domingo.png', nombre: 'Domingo 7' }
+      ];
+
+      animales = [
+        { imagen: 'cerdo.png', nombre: 'Cerdo🐷' },
+        { imagen: 'chango.png', nombre: 'Mono🐒' },
+        { imagen: 'elefante.png', nombre: 'Elefante🐘' },
+        { imagen: 'gallo.png', nombre: 'Gallo🐓' },
+        { imagen: 'jirafa.png', nombre: 'Jirafa🦒' },
+        { imagen: 'oso.png', nombre: 'Oso🐻' },
+        { imagen: 'perro.png', nombre: 'Perro🐶' },
+        { imagen: 'pez.png', nombre: 'Pez🐠' }
+        
+        ];
 
   seleccionarCategoria(categoria: string) {
     if (categoria === 'abecedario') {
@@ -109,6 +142,12 @@ export class EducacionComponent {
     } else if (categoria === 'estaciones') {
       this.titulo = '🌞 Estaciones del año en Señas';
       this.elementos = this.estaciones;
+    } else if (categoria === 'dias') {
+      this.titulo = '🌤️ Dias de la semana';
+      this.elementos = this.dias;
+    } else if (categoria === 'animales') {
+      this.titulo = '🫎 Animales 🦁';
+      this.elementos = this.animales;
     }
   }
 

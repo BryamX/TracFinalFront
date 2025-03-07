@@ -14,7 +14,7 @@ export class JuegoCartasComponent {
 
   cartas = [
     {
-      imagen: 'a.png', // Cambia por la ruta correcta de la imagen
+      imagen: 'a.png', // llama a la imagen
       respuestaCorrecta: 'A',
       opciones: ['A', 'B', 'C']
     },
@@ -69,6 +69,41 @@ export class JuegoCartasComponent {
       opciones: ['J', 'M', 'Q']
     },
     {
+      imagen: 's.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'S',
+      opciones: ['V', 'S', 'H']
+    },
+    {
+      imagen: 't.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'T',
+      opciones: ['X', 'T', 'U']
+    },
+    {
+      imagen: 'u.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'U',
+      opciones: ['R', '3', 'U']
+    },
+    {
+      imagen: 'v.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'V',
+      opciones: ['W', 'B', 'V']
+    },
+    {
+      imagen: 'w.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'W',
+      opciones: ['A', 'Y', 'W']
+    },
+    {
+      imagen: 'x.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'X',
+      opciones: ['D', 'J', 'X']
+    },
+    {
+      imagen: 'y.png', // Cambia por la ruta correcta de la imagen
+      respuestaCorrecta: 'Y',
+      opciones: ['Y', '6', 'P']
+    },
+    {
       imagen: 'k.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'K',
       opciones: ['K', 'O', 'B']
@@ -117,41 +152,6 @@ export class JuegoCartasComponent {
       imagen: 'rr.png', // Cambia por la ruta correcta de la imagen
       respuestaCorrecta: 'RR',
       opciones: ['RR', 'E', 'G']
-    },
-    {
-      imagen: 's.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'S',
-      opciones: ['V', 'S', 'H']
-    },
-    {
-      imagen: 't.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'T',
-      opciones: ['X', 'T', 'U']
-    },
-    {
-      imagen: 'u.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'U',
-      opciones: ['R', '3', 'U']
-    },
-    {
-      imagen: 'v.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'V',
-      opciones: ['W', 'B', 'V']
-    },
-    {
-      imagen: 'w.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'W',
-      opciones: ['A', 'Y', 'W']
-    },
-    {
-      imagen: 'x.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'X',
-      opciones: ['D', 'J', 'X']
-    },
-    {
-      imagen: 'y.png', // Cambia por la ruta correcta de la imagen
-      respuestaCorrecta: 'Y',
-      opciones: ['Y', '6', 'P']
     },
     {
       imagen: 'z.png', // Cambia por la ruta correcta de la imagen
